@@ -102,3 +102,14 @@ prependedNav.textContent = "Prepended";
 let nav = document.querySelector('nav');
 nav.appendChild(appendedNav);
 nav.prepend(prependedNav);
+
+
+
+
+
+// STRETCH
+let ctaDiv = document.querySelector('.cta-text');
+let stretchBtn = document.createElement('button');
+stretchBtn.textContent = "Stretch";
+ctaDiv.appendChild(stretchBtn);
+stretchBtn.addEventListener('click', event => event.target.textContent = "It worked!");
