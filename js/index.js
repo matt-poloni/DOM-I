@@ -39,4 +39,32 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Navigation Links
+let navLinks = document.querySelectorAll("nav > a");
+navLinks.forEach((ele, i) => ele.textContent = siteContent["nav"][`nav-item-${i+1}`]);
+
+// CTA Section
+let ctaH1 = document.querySelector(".cta h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+let ctaBtn = document.querySelector(".cta button");
+ctaBtn.textContent = siteContent["cta"]["button"];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Main Content Section (still needs a lot of work)
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let topContent = document.querySelectorAll(".main-content .text-content");
+
+// Contact Section
+let contact = document.querySelectorAll(".contact > *");
+contact[0].textContent = siteContent["contact"]["contact-h4"];
+contact[1].textContent = siteContent["contact"]["address"];
+contact[2].textContent = siteContent["contact"]["phone"];
+contact[3].textContent = siteContent["contact"]["email"];
+
+// Footer
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
