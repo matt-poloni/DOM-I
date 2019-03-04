@@ -56,20 +56,20 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 // Main Content Section
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-let topContent = document.querySelectorAll(".main-content .text-content");
-let featuresContent = topContent[0].children;
+let mainContent = document.querySelectorAll(".main-content .text-content");
+let featuresContent = mainContent[0].children;
 featuresContent[0].textContent = siteContent["main-content"]["features-h4"];
 featuresContent[1].textContent = siteContent["main-content"]["features-content"];
-let aboutContent = topContent[1].children;
+let aboutContent = mainContent[1].children;
 aboutContent[0].textContent = siteContent["main-content"]["about-h4"];
 aboutContent[1].textContent = siteContent["main-content"]["about-content"];
-let servicesContent = topContent[2].children;
+let servicesContent = mainContent[2].children;
 servicesContent[0].textContent = siteContent["main-content"]["services-h4"];
 servicesContent[1].textContent = siteContent["main-content"]["services-content"];
-let productContent = topContent[3].children;
+let productContent = mainContent[3].children;
 productContent[0].textContent = siteContent["main-content"]["product-h4"];
 productContent[1].textContent = siteContent["main-content"]["product-content"];
-let visionContent = topContent[4].children;
+let visionContent = mainContent[4].children;
 visionContent[0].textContent = siteContent["main-content"]["vision-h4"];
 visionContent[1].textContent = siteContent["main-content"]["vision-content"];
 
