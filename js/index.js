@@ -84,3 +84,21 @@ contact[3].textContent = siteContent["contact"]["email"];
 // Footer
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+
+
+// Task 3: Add new content
+
+// Change nav text color
+navLinks.forEach(ele => ele.style.color = 'green');
+
+// `.appendChild()` and `.prepend()`
+let appendedNav = document.createElement('a');
+appendedNav.setAttribute('href', '#');
+appendedNav.textContent = "Appended";
+let prependedNav = document.createElement('a');
+prependedNav.setAttribute('href', '#');
+prependedNav.textContent = "Prepended";
+let nav = document.querySelector('nav');
+nav.appendChild(appendedNav);
+nav.prepend(prependedNav);
