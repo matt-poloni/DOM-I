@@ -39,4 +39,81 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Navigation Links
+let navLinks = document.querySelectorAll("nav > a");
+navLinks.forEach((ele, i) => ele.textContent = siteContent["nav"][`nav-item-${i+1}`]);
+
+// CTA Section
+let ctaH1 = document.querySelector(".cta h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+let ctaBtn = document.querySelector(".cta button");
+ctaBtn.textContent = siteContent["cta"]["button"];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Main Content Section
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let mainContent = document.querySelectorAll(".main-content .text-content");
+let featuresContent = mainContent[0].children;
+featuresContent[0].textContent = siteContent["main-content"]["features-h4"];
+featuresContent[1].textContent = siteContent["main-content"]["features-content"];
+let aboutContent = mainContent[1].children;
+aboutContent[0].textContent = siteContent["main-content"]["about-h4"];
+aboutContent[1].textContent = siteContent["main-content"]["about-content"];
+let servicesContent = mainContent[2].children;
+servicesContent[0].textContent = siteContent["main-content"]["services-h4"];
+servicesContent[1].textContent = siteContent["main-content"]["services-content"];
+let productContent = mainContent[3].children;
+productContent[0].textContent = siteContent["main-content"]["product-h4"];
+productContent[1].textContent = siteContent["main-content"]["product-content"];
+let visionContent = mainContent[4].children;
+visionContent[0].textContent = siteContent["main-content"]["vision-h4"];
+visionContent[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+// Contact Section
+let contact = document.querySelectorAll(".contact > *");
+contact[0].textContent = siteContent["contact"]["contact-h4"];
+contact[1].textContent = siteContent["contact"]["address"];
+contact[2].textContent = siteContent["contact"]["phone"];
+contact[3].textContent = siteContent["contact"]["email"];
+
+// Footer
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
+
+
+
+// Task 3: Add new content
+
+// Change nav text color
+navLinks.forEach(ele => ele.style.color = 'green');
+
+// `.appendChild()` and `.prepend()`
+let appendedNav = document.createElement('a');
+appendedNav.setAttribute('href', '#');
+appendedNav.textContent = "Appended";
+let prependedNav = document.createElement('a');
+prependedNav.setAttribute('href', '#');
+prependedNav.textContent = "Prepended";
+let nav = document.querySelector('nav');
+nav.appendChild(appendedNav);
+nav.prepend(prependedNav);
+
+
+
+
+
+// STRETCH
+let ctaDiv = document.querySelector('.cta-text');
+let stretchBtn = document.createElement('button');
+stretchBtn.textContent = "Stretch";
+ctaDiv.appendChild(stretchBtn);
+stretchBtn.addEventListener('click', event => {
+  event.target.textContent = "It worked!";
+  ctaH1.textContent = "Who is Dom, exactly?";
+  ctaH1.style.color = 'crimson';
+});
