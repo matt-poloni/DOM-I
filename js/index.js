@@ -112,4 +112,8 @@ let ctaDiv = document.querySelector('.cta-text');
 let stretchBtn = document.createElement('button');
 stretchBtn.textContent = "Stretch";
 ctaDiv.appendChild(stretchBtn);
-stretchBtn.addEventListener('click', event => event.target.textContent = "It worked!");
+stretchBtn.addEventListener('click', event => {
+  event.target.textContent = "It worked!";
+  ctaH1.textContent = "Who is Dom, exactly?";
+  ctaH1.style.color = 'crimson';
+});
